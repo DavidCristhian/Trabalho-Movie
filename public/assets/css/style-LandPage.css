@@ -99,7 +99,7 @@ section#new-Series{
     flex-direction: column;
 }
 
-.grid-New-Series{
+.grid-Series{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
@@ -128,13 +128,13 @@ section#new-Series{
 }/* Fim section new-Series */
 
 @media screen and (width < 1200px){
-    .grid-New-Series{
+    .grid-Series{
         grid-template-columns: repeat(3, 1fr);
     }
 }
 
 @media screen and (width < 900px){
-    .grid-New-Series{
+    .grid-Series{
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
@@ -151,3 +151,9 @@ section#new-Series{
         gap: 1rem;
     }
 }
+
+section#my-Series{/* Inicio section my-Series  */
+    display: flex;
+    flex-direction: column;
+}
+/* Fim section my-Series  */
