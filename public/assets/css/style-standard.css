@@ -58,7 +58,6 @@ body{
 }
 .container-standard{
     display: flex;
-    justify-content: center;
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px 4%;
@@ -67,6 +66,12 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+section{
+    margin: 100px 0 100px 0;
+}
+.title-Section{
+    margin: 30px 0 30px 0;
 }
 a{
     color: var(--color-links-light-100);
