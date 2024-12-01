@@ -1,0 +1,94 @@
+/* Container principal do carrossel */
+.carousel-container {
+    position: relative;
+    width: 90%;
+    max-width: 90%;
+    height: 600px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+/* Configura o carrossel para rolar horizontalmente */
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease;
+    height: 100%;
+}
+
+/* Cada slide ocupa toda a largura do container */
+.carousel-slide {
+    min-width: 100%;
+    height: 100%;
+    position: relative;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* Imagem de fundo */
+.carousel-slide img {
+    width: 100%;
+    height: 100%; /* Garante que a imagem ocupe toda a altura */
+    border-radius: 8px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1; /* Imagem fica em uma camada inferior */
+}
+
+/* Título e descrição no slide */
+.carousel-slide h2,
+.carousel-slide p {
+    position: absolute;
+    z-index: 2; /* Fica acima da imagem */
+    color: #fff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Cria contraste com o fundo */
+    margin: 0;
+}
+
+/* Título (h2) centralizado na parte inferior */
+.carousel-slide h2 {
+    bottom: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Descrição (p) logo abaixo do título */
+.carousel-slide p {
+    bottom: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 16px;
+    max-width: 80%;
+}
+
+/* Botões de navegação */
+button.prev, button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 3; /* Botões ficam acima da imagem e do conteúdo */
+    transition: background-color 0.3s ease;
+}
+
+/* Botão da esquerda */
+button.prev {
+    left: 10px;
+}
+
+/* Botão da direita */
+button.next {
+    right: 10px;
+}
+
+/* Efeito de hover nos botões */
+button.prev:hover, button.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}

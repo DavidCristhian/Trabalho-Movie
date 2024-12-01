@@ -57,8 +57,10 @@ body{
     overflow-x: hidden;
 }
 .container-standard{
+    display: flex;
+    justify-content: center;
     max-width: 1200px;
-    margin: auto;
+    margin: 0 auto;
     padding: 20px 4%;
 }
 .flex{
@@ -100,36 +102,10 @@ header{/* Start Header */
 .navigation-item{
     position: relative;
 }
-.active-Item-Header::after{
-    position: absolute;
-    content: "";
-    left: 0;
-    bottom: 0;
-    height: 2px;
-    width: 70%;
-    background-color: #307EF2;
-}
 .btn-abrir-menu{
     display: none;
     cursor: pointer;
 }
-/* Start responsiviness header of mode desktop */
-@media screen and (width < 800px){
-    .navigation-links{
-        display: none;
-    }
-    .btn-abrir-menu{
-        display: flex;
-    }
-}
-@media screen and (width > 800px){
-    .btn-abrir-menu > i,
-    .menu-mobile,
-    .menu-mobile.abrir-menu ~ .overlay-menu{
-        display: none;
-    }
-}
-/* End responsiviness header of mode desktop */
 .menu-mobile{/* Start menu mobile */
     background-color: var(--color-background);
     height: 100vh;
@@ -182,5 +158,19 @@ header{/* Start Header */
     top: 0;
     left: 0;
     z-index: 100;
+}/* End menu mobile */
+@media screen and (width < 800px){/* Start responsiviness header of mode desktop */
+    .navigation-links{
+        display: none;
+    }
+    .btn-abrir-menu{
+        display: flex;
+    }
 }
-/* End menu mobile */
+@media screen and (width > 800px){
+    .btn-abrir-menu > i,
+    .menu-mobile,
+    .menu-mobile.abrir-menu ~ .overlay-menu{
+        display: none;
+    }
+}/* End responsiviness header of mode desktop */
