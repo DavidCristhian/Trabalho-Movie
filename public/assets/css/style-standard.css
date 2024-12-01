@@ -1,0 +1,186 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500&family=Passion+One&display=swap');
+*{/* Start of default configuration */
+    padding: 0;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+:root{
+    --main-color: #e9a209;
+    --color-primary: #6c9bcf;
+    --color-danger: #ff0060;
+    --color-success: #1b9c85;
+    --color-warning: #f7d060;
+    --color-white: #fff;
+    --color-info-dark: #7d8da1;
+    --color-dark: #363949;
+    --color-light: rgba(132, 139, 200, 0.18);
+    --color-dark-variant: #677483;
+    --color-background: #f6f6f9;
+
+    --card-border-radius: 2rem;
+    --card-border-1: 0.4rem;
+    --card-radius-2: 1.2rem;
+
+    --card-padding: 1.8rem;
+    --padding-1: 1.2rem;
+
+    --box-shadow-dark: 0 2rem 3rem var(--color-light);
+    --box-shadow-light: 0px 0px 12px 4px rgba(0, 0, 0, 0.1);
+
+    --color-neutral-0: black;
+    --color-neutral-15: #18181b;
+    --color-neutral-30: #27272a;
+    --color-neutral-45: #323232;
+    --color-neutral-60: #ccc;
+    --color-neutral-100: #fff;
+
+    --color-links-light-50: #1d1d1dad;
+    --color-links-light-100: #1d1d1d;
+}
+
+.white-mode-variables{
+    --color-links-light-50: #1d1d1dad;
+    --color-links-light-100: #1d1d1d;
+}
+
+.dark-mode-variables{
+    --color-white: #202528;
+    --color-dark: #edeffd;
+    --color-dark-variant: #a3bdcc;
+    --color-light: rgba(0,0,0,0.4);
+    --box-shadow: 0 2rem 3rem var(--color-light);
+}
+body{
+    overflow-x: hidden;
+}
+.container-standard{
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px 4%;
+}
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+a{
+    color: var(--color-links-light-100);
+}/* End of default configuration */
+header{/* Start Header */
+    position: sticky;
+}
+.navbar{
+    justify-content: space-between;
+    padding: 10px;
+    z-index: 10;
+    width: 100%;
+}
+.logo a{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    font-size: 1.3rem;
+}
+.logo img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.navigation-links{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    padding: 10px;
+}
+.navigation-item{
+    position: relative;
+}
+.active-Item-Header::after{
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 70%;
+    background-color: #307EF2;
+}
+.btn-abrir-menu{
+    display: none;
+    cursor: pointer;
+}
+/* Start responsiviness header of mode desktop */
+@media screen and (width < 800px){
+    .navigation-links{
+        display: none;
+    }
+    .btn-abrir-menu{
+        display: flex;
+    }
+}
+@media screen and (width > 800px){
+    .btn-abrir-menu > i,
+    .menu-mobile,
+    .menu-mobile.abrir-menu ~ .overlay-menu{
+        display: none;
+    }
+}
+/* End responsiviness header of mode desktop */
+.menu-mobile{/* Start menu mobile */
+    background-color: var(--color-background);
+    height: 100vh;
+    width: 0%;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    transition: .2s;
+}
+.menu-mobile.abrir-menu{
+    width: 50%;
+}
+.menu-mobile.abrir-menu ~ .overlay-menu{
+    display: block;
+}
+.menu-mobile .btn-close{
+    padding: 20px 4%;
+}
+.menu-mobile .btn-close i{
+    color: var(--color-icons-dark);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+.menu-mobile nav ul{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    text-align: right;
+}
+.menu-mobile li a{
+    display: block;
+    color: rgba(0, 0, 0, 0.692);
+    font-size: 20px;
+    padding: 20px 4%;
+    transition: all 0.3s ease-in-out;
+}
+.menu-mobile li a:hover{
+    color: var(--color-neutral-0);
+    margin-right: 20px;
+    transition: all 0.3s ease-in-out;
+}
+.overlay-menu{
+    display: none;
+    background-color: #000000e7;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+/* End menu mobile */
