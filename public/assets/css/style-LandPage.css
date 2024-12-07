@@ -185,7 +185,7 @@ section#my-Series{/* Inicio section my-Series  */
     flex-direction: column;
     gap: 1rem;
 }
-
+/* Início da responsividade da section info-Creator*/
 @media screen and (width < 900px){
     .box-Info-Creator{
         flex-direction: column;
@@ -196,4 +196,50 @@ section#my-Series{/* Inicio section my-Series  */
         height: 100%;
     }
 }
+/* Fim da responsividade da section info-Creator*/
 /* Final da sessão info-Creator */
+/* Início do footer */
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #1c1c1c;
+    color: white;
+    margin-top: 50px;
+}
+#contatos{
+    flex-direction: column;
+}
+.title-Footer{
+    margin: 20px 0 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+.title-Footer h2{
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+.box-Info-Contacts{
+    display: flex;
+    justify-content: space-between;
+    margin: 40px 0 40px 0;
+}
+.box-Info-Contacts ul{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.box-Info-Contacts li a{
+    color: #ccc;
+    transition: all ease-in .3s;
+}
+.box-Info-Contacts li a:hover{
+    color: white;
+}
+.copyright{
+    padding-bottom: 20px;
+}
+/* Fim do footer */
