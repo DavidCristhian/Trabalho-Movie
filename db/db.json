@@ -1,6 +1,10 @@
 {
-    "movies": [
-      { "id": 1, "title": "Matrix", "year": 1999 },
-      { "id": 2, "title": "Inception", "year": 2010 }
-    ]
+  "author": {
+    "name": "David Cristhian",
+    "bio": "Desenvolvedor web apaixonado por tecnologia e cinema. Criador do CineVerse, um espaço para amantes da sétima arte.",
+    "socials":{
+      "linkedin": "https://www.linkedin.com/in/david-cristhian-0117a426b/",
+      "github": "https://github.com/DavidCristhian"
+    }
   }
+}
