@@ -3,14 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Início</title>
-    <link rel="shortcut icon" href="../public/assets/imgs/favicon.png" type="image/x-icon">
-    <!-- Link cdn font icon -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- Link css standard -->
-    <link rel="stylesheet" href="assets/css/style-standard.css">
-    <!-- Link css of landPage -->
-    <link rel="stylesheet" href="assets/css/style-LandPage.css">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Explorador</title>
+        <link rel="shortcut icon" href="../public/assets/imgs/favicon.png" type="image/x-icon">
+        <!-- Link cdn font icon -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- Link css standard -->
+        <link rel="stylesheet" href="assets/css/style-standard.css">
+        <!-- Link css of explorer -->
+        <link rel="stylesheet" href="assets/css/style-ExplorerPage.css">
+    </head>
 </head>
 <body>
     <header><!-- Inicio Cabeçalho -->
@@ -24,7 +28,7 @@
                         <li class="navigation-item"><a href="index.html">Início</a></li>
                         <li class="navigation-item"><a href="">Séries</a></li>
                         <li class="navigation-item"><a href="">Filmes</a></li>
-                        <li class="navigation-item"><a href="explorador.html">Explorar</a></li>
+                        <li class="navigation-item"><a href="explorer.html">Explorar</a></li>
                         <li class="navigation-item"><a href="">Minha lista</a></li>
                     </ul>
                 </nav>
@@ -41,7 +45,7 @@
                         <li class="navigation-item"><a href="index.html">Início</a></li>
                         <li class="navigation-item"><a href="">Séries</a></li>
                         <li class="navigation-item"><a href="">Filmes</a></li>
-                        <li class="navigation-item"><a href="explorer.html">Explorar</a></li>
+                        <li class="navigation-item"><a href="">Catálogo</a></li>
                         <li class="navigation-item"><a href="">Minha lista</a></li>
                     </ul>
                 </nav>
@@ -49,133 +53,18 @@
             <div id="overlay-menu" class="overlay-menu"></div>
         </div>
     </header><!-- Fim Cabeçalho -->
-    <!-- Início da section carousel films -->
-    <section id="carousel-films">
-        <div class="carousel-container">
-            <!-- Caroussel -->
-            <div class="carousel">
-                <div class="carousel-slide">
-                    <a href="">
-                        <img src="assets/imgs/logo_1.jpeg" alt="">
-                        <h2>Titulo</h2>
-                        <p>Descrição</p>
-                    </a>
-                </div>
-                <div class="carousel-slide">
-                    <a href="">
-                        <img src="assets/imgs/favicon.png" alt="">
-                        <h2>Titulo</h2>
-                        <p>Descrição</p>
-                    </a>
-                </div>
-                <div class="carousel-slide">
-                    <a href="">
-                        <img src="assets/imgs/logo_1.jpeg" alt="">
-                        <h2>Titulo</h2>
-                        <p>Descrição</p>
-                    </a>
-                </div>
-            </div>
-    
-            <!-- Botões de navegação -->
-            <button class="prev" onclick="moveSlide(-1)"><i class="fa-solid fa-arrow-left"></i></button>
-            <button class="next" onclick="moveSlide(1)"><i class="fa-solid fa-arrow-right"></i></button>
-        </div>
-    </section>
-    <!-- Fim da section carousel films -->    
-    <!-- Início da section new series -->
-    <section id="new-Series" class="container-standard">
+
+    <div id="box-Search" class="box-Search">
+        <input id="inpSearch" type="text">
+        <label for="inpSearch"><i class="fa-solid fa-magnifying-glass"></i></label>
+    </div>
+
+    <section id="section-Movies" class="container-standard">
         <div class="title-Section">
-            <h2>Novas séries</h2>
-        </div>
-        <div class="grid-Series">
-            <!-- <div class="serie-Item">
-                <a href="">
-                    <div class="img-Serie">
-                        <img src="assets/imgs/logo_1.jpeg" alt="">
-                    </div>
-                    <div class="content-Serie">
-                        <div class="title-Serie">
-                            <h3>TEste</h3>
-                        </div>
-                        <div class="description-Serie">
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia possimus, velit veritatis numquam minus veniam error, rerum ullam odit ab ea mollitia porro eligendi dolorem vero, quasi quo voluptatibus cum!</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="serie-Item">
-                <a href="">
-                    <div class="img-Serie">
-                        <img src="assets/imgs/logo_1.jpeg" alt="">
-                    </div>
-                    <div class="content-Serie">
-                        <div class="title-Serie">
-                            <h3>TEste</h3>
-                        </div>
-                        <div class="description-Serie">
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia possimus, velit veritatis numquam minus veniam error, rerum ullam odit ab ea mollitia porro eligendi dolorem vero, quasi quo voluptatibus cum!</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="serie-Item">
-                <a href="">
-                    <div class="img-Serie">
-                        <img src="assets/imgs/logo_1.jpeg" alt="">
-                    </div>
-                    <div class="content-Serie">
-                        <div class="title-Serie">
-                            <h3>TEste</h3>
-                        </div>
-                        <div class="description-Serie">
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia possimus, velit veritatis numquam minus veniam error, rerum ullam odit ab ea mollitia porro eligendi dolorem vero, quasi quo voluptatibus cum!</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="serie-Item">
-                <a href="">
-                    <div class="img-Serie">
-                        <img src="assets/imgs/logo_1.jpeg" alt="">
-                    </div>
-                    <div class="content-Serie">
-                        <div class="title-Serie">
-                            <h3>TEste</h3>
-                        </div>
-                        <div class="description-Serie">
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia possimus, velit veritatis numquam minus veniam error, rerum ullam odit ab ea mollitia porro eligendi dolorem vero, quasi quo voluptatibus cum!</p>
-                        </div>
-                    </div>
-                </a>
-            </div> -->
-        </div>
-    </section>
-    <!-- Fim da section new series -->
-    <!-- Início da section info creator -->
-    <section id="info-Creator" class="container-standard">
-        <div class="title-Section">
-            <h2>Informações do creador</h2>
-        </div>
-        <div class="box-Info-Creator">
-            <div class="img-Creator">
-                <img src="./assets/imgs/6c5010e0-ad3f-4502-ba02-acee9caf2661.jpg" alt="Imagem do criador">
-            </div>
-            <div class="content-Info-Creator">
-                <div class="title-Info-Creator">
-                    <h2>Autoria</h2>
-                </div>
-                <div class="infos-Creator" id="content-Creator">
-                    <!-- Conteudo criado no json -->
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Fim da section info creator -->
-    <!-- Início da section my series -->
-    <section id="my-Series" class="container-standard">
-        <div class="title-Section">
-            <h2>Minhas séries</h2>
+            <a href="">
+                <h2>Filmes</h2>
+                <i class="fa-solid fa-angles-right"></i>
+            </a>
         </div>
         <div class="grid-Series">
             <div class="serie-Item">
@@ -240,7 +129,78 @@
             </div>
         </div>
     </section>
-    <!-- Início da section my series -->
+
+    <section id="section-Series" class="container-standard">
+        <div class="title-Section">
+            <a href="">
+                <h2>Séries</h2>
+                <i class="fa-solid fa-angles-right"></i>
+            </a>
+        </div>
+        <div class="grid-Series">
+            <div class="serie-Item">
+                <a href="">
+                    <div class="img-Serie">
+                        <img src="assets/imgs/logo_1.jpeg" alt="">
+                    </div>
+                    <div class="content-Serie">
+                        <div class="title-Serie">
+                            <h3>TEste</h3>
+                        </div>
+                        <div class="description-Serie">
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia possimus, velit veritatis numquam minus veniam error, rerum ullam odit ab ea mollitia porro eligendi dolorem vero, quasi quo voluptatibus cum!</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="serie-Item">
+                <a href="">
+                    <div class="img-Serie">
+                        <img src="assets/imgs/logo_1.jpeg" alt="">
+                    </div>
+                    <div class="content-Serie">
+                        <div class="title-Serie">
+                            <h3>TEste</h3>
+                        </div>
+                        <div class="description-Serie">
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia possimus, velit veritatis numquam minus veniam error, rerum ullam odit ab ea mollitia porro eligendi dolorem vero, quasi quo voluptatibus cum!</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="serie-Item">
+                <a href="">
+                    <div class="img-Serie">
+                        <img src="assets/imgs/logo_1.jpeg" alt="">
+                    </div>
+                    <div class="content-Serie">
+                        <div class="title-Serie">
+                            <h3>TEste</h3>
+                        </div>
+                        <div class="description-Serie">
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia possimus, velit veritatis numquam minus veniam error, rerum ullam odit ab ea mollitia porro eligendi dolorem vero, quasi quo voluptatibus cum!</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="serie-Item">
+                <a href="">
+                    <div class="img-Serie">
+                        <img src="assets/imgs/logo_1.jpeg" alt="">
+                    </div>
+                    <div class="content-Serie">
+                        <div class="title-Serie">
+                            <h3>TEste</h3>
+                        </div>
+                        <div class="description-Serie">
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia possimus, velit veritatis numquam minus veniam error, rerum ullam odit ab ea mollitia porro eligendi dolorem vero, quasi quo voluptatibus cum!</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
     <footer>
         <div id="contatos" class="container-standard">
             <div class="title-Footer">
@@ -271,11 +231,5 @@
 
     <!-- Link script header -->
     <script src="assets/script/script-Header.js" defer></script>
-    <!-- Link script carousel -->
-    <script src="assets/script/script-Carousel.js" defer></script>
-    <!-- Link script info-Creator -->
-    <script src="assets/script/section-Info-Creator.js" defer></script>
-    <!-- Link script home page -->
-    <script src="assets/script/script-home-Page.js" defer></script>
 </body>
 </html>
