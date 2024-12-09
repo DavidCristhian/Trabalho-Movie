@@ -30,3 +30,37 @@ function startAutoScroll() {
 
 // Incia a rolagem automática assim que a página for carregada
 window.onload = startAutoScroll;
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    fetch('https://api.themoviedb.org/3/tv/popular?api_key=46244a88517452ac59c84ab87488cb5e&language=pt-BR')
+        .then(res => res.json())
+        .then(data => {
+            let str = '';
+            const results = data.results;
+
+            for (let i = 0; i < data.results.length; i++) { // Apenas as 4 primeiras séries
+                let series = results[i];
+                const imageUrl = `https://image.tmdb.org/t/p/w500${series.poster_path}`;
+                const overview = series.overview || 'Descrição não disponível'; // Verificação
+
+                str += `
+                    <div class="carousel-slide">
+                        <a href="detalhes.html?id=${series.id}&type=tv">
+                            <img src="${imageUrl}" alt="${series.name}">
+                            <h2>${series.name}</h2>
+                            <p>${overview}</p>
+                        </a>
+                    </div>
+                    `;
+            }
+
+            const carouselItem = document.querySelector('.carousel');
+            if (carouselItem) {
+                carouselItem.innerHTML = str;
+            } else {
+                console.error('Elemento .carousel não encontrado.');
+            }
+        })
+        .catch(err => console.error('Erro ao carregar séries populares:', err));
+});

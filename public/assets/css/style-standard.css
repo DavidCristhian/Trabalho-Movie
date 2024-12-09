@@ -9,7 +9,6 @@
     list-style: none;
 }
 :root{
-    --main-color: #e9a209;
     --color-primary: #6c9bcf;
     --color-danger: #ff0060;
     --color-success: #1b9c85;
@@ -202,7 +201,13 @@ header{/* Começo do Header */
     grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
 }
+.grid-Movies{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
 .serie-Item{
+    position: relative;
     width: 250px;
     height: 400px;
     overflow: hidden;

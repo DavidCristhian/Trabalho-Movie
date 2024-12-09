@@ -3,18 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Explorador</title>
-        <link rel="shortcut icon" href="../public/assets/imgs/favicon.png" type="image/x-icon">
-        <!-- Link cdn font icon -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <!-- Link css standard -->
-        <link rel="stylesheet" href="assets/css/style-standard.css">
-        <!-- Link css of explorer -->
-        <link rel="stylesheet" href="assets/css/style-ExplorerPage.css">
-    </head>
+    <title>Detalhe</title>
+    <link rel="shortcut icon" href="../public/assets/imgs/favicon.png" type="image/x-icon">
+    <!-- Link cdn font icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Link css standard -->
+    <link rel="stylesheet" href="assets/css/style-standard.css">
+    <!-- Link css detalhe -->
+    <link rel="stylesheet" href="assets/css/style-Detalhe.css">
 </head>
 <body>
     <header><!-- Inicio Cabeçalho -->
@@ -43,7 +39,7 @@
                         <li class="navigation-item"><a href="index.html">Início</a></li>
                         <li class="navigation-item"><a href="">Séries</a></li>
                         <li class="navigation-item"><a href="">Filmes</a></li>
-                        <li class="navigation-item"><a href="">Catálogo</a></li>
+                        <li class="navigation-item"><a href="explorer.html">Explorar</a></li>
                         <li class="navigation-item"><a href="">Minha lista</a></li>
                     </ul>
                 </nav>
@@ -52,39 +48,39 @@
         </div>
     </header><!-- Fim Cabeçalho -->
 
-    <div id="box-Search" class="box-Search container-standard">
-        <input type="text" id="search-input" placeholder="Digite o nome da série..." />
-        <button id="search-btn">Pesquisar</button>
-        <!-- <label for="inpSearch"><i class="fa-solid fa-magnifying-glass"></i></label> -->
-    </div>
-
-    <section id="search-Films" class="container-standard">
-        <div class="grid-Search">
-            <div id="search-results" class="grid-Search"></div>
+    <!-- detalhes.html -->
+    <section id="conteudo" class="container-standard">
+        <div class="box-img">
+            <img src="assets/imgs/placeholder.jpg" alt="Imagem do Filme">
+        </div>
+        <div class="box-Contant">
+            <div class="box-Info-Content">
+                <h2>Nome:</h2>
+                <p></p> <!-- Aqui será exibido o título do filme -->
+            </div>
+            <div class="box-Info-Content">
+                <h2>Descrição:</h2>
+                <p></p> <!-- Aqui será exibida a descrição do filme -->
+            </div>
+            <div class="box-Info-Content">
+                <h2>Média Avaliação:</h2>
+                <p></p> <!-- Aqui será exibida a média de avaliação -->
+            </div>
+            <div class="box-Info-Content">
+                <h2>Total de votos:</h2>
+                <p></p> <!-- Aqui será exibido o número de votos -->
+            </div>
         </div>
     </section>
 
-    <section id="section-Movies" class="container-standard">
+    <section id="elenco" class="container-standard">
         <div class="title-Section">
             <a href="">
-                <h2>Séries</h2>
-                <i class="fa-solid fa-angles-right"></i>
+                <h2>Elenco</h2>
             </a>
         </div>
-        <div class="grid-Series">
-            <!-- Conteudo dos slides, informações com origem na API -->
-        </div>
-    </section>
-
-    <section id="section-Series" class="container-standard">
-        <div class="title-Section">
-            <a href="">
-                <h2>Filmes</h2>
-                <i class="fa-solid fa-angles-right"></i>
-            </a>
-        </div>
-        <div class="grid-Movies">
-            
+        <div class="grid-Series" id="elenco-lista">
+            <!-- Elenco será carregado aqui -->
         </div>
     </section>
 
@@ -118,7 +114,9 @@
 
     <!-- Link script header -->
     <script src="assets/script/script-Header.js" defer></script>
-    <!-- Link script explorer -->
-    <script src="assets/script/script-Explorer.js" defer></script>
+    <!-- Link script home page -->
+    <script src="assets/script/script-home-Page.js" defer></script>
+    <!-- Link script destalhes -->
+    <script src="assets/script/script-Detalhes.js" defer></script>
 </body>
 </html>

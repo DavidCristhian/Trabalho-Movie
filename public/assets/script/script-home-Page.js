@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 str += `
                     <div class="serie-Item">
-                        <a href="">
+                        <a href="detalhes.html?id=${series.id}&type=tv">
                             <div class="img-Serie">
                                 <img src="${imageUrl}" alt="${series.name}">
                             </div>

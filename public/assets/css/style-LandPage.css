@@ -43,7 +43,6 @@
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Cria contraste com o fundo */
     margin: 0;
 }
-
 /* Título (h2) centralizado na parte inferior */
 .carousel-slide h2 {
     bottom: 100px;
